@@ -1,0 +1,42 @@
+Module 1 - Welcome to the course
+    1. Development environment setup
+    ******
+
+    2. Customizing VS Code for C# Development
+    ******
+
+    3. What's wrong with the monolith
+        • Monolith pros and cons
+        Pros                                -   Cons
+        - Convenient for new projects           - Easily gets too complex to understand
+        - Tools mostly focussed on them         - Merging code can be challenging
+        - Great code reuse                      - Slows down IDE
+        - Easier to run locally                 - Long build times
+        - Easier to debug and troubleshoot      - Slow and infrequent deployments
+        - One thing to build                    - Long testing and stabilization periods
+        - One thing to deploy                   - Rolling back is all or nothing
+        - One thing to test end to end          - No isolation between modules
+        - One thing to scale                    - Can be hard to scale
+                                                - Hard to adopt new tech    
+
+    4. What are microservices
+        - An architectural style that structures an application as a collection of independently deployable services that are modelled around a business domain and are usually owned by a small team.
+        • Microservices pros and cons
+        Pros                                            -   Cons
+        - Small, easier to understand code base             - Not easy to find the right set of services
+        - Quicker to build                                  - Adds the complexity of distributed systems
+        - Independent, faster deployments and rollbacks     - Shared codes moved to separate libraries
+        - Independently scalable                            - No good tolling for distributed apps
+        - Much better isolation from failures               - Releasing features across services is hard 
+        - Designed for continuous delivery                  - Hard to troubleshoot issues across services 
+        - Easier to adopt new, varied tech                  - Can't use transactions across services 
+        - Grants autonomy to teams                          - Raises the required skill set for the team
+        - Allows teams to work in parallel
+
+        • When to use microservices?
+        - It's perfectly fine to start with a monolith then move to microservices
+        - Start looking for microservices when:
+            -> The code base is more than what a small team  can maintain
+            -> Teams can't move fast anymore
+            -> Builds become too slow due to large code base
+            -> Time to market is compromised due to infrequent deployments and long verification times
