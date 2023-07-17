@@ -9,7 +9,7 @@ URL : https://www.youtube.com/watch?v=CqCDOosvZIk -- .NET Microservices – Full
 35.18 Module 2 - Your first microservice
 35.53 Creating a microservice via the .NET CLI
 45.46 Introduction to the REST API and DTOs
-47.35 Addind the DTOs
+47.35 Adding the DTOs
 50.52 Adding the REST API operations
 1.15.57 Handling invalid inputs
 1.27.04 Module 3 - Adding database storage
