@@ -47,7 +47,13 @@ Module 2 - Your first microservice
     -> (Can return different types depending on what we have available)
 
 • IActionResult
-    -> When you don't want to return a specific type (No-Content)
+    -> When you don't want to return a specific type (No-Content :: gives you the ability to return NoContent) [ > also ActionResult ]
+    -> :: gives you the ability to return NotFound() [ > also ActionResult ]
+
+• To return a status code when getting item, change:
+    -> public ItemDto GetById(Guid id)
+    To
+
 
 
 5. Handling invalid inputs  
