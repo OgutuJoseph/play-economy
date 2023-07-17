@@ -30,11 +30,25 @@ Module 2 - Your first microservice
 2. Introduction to the REST API and DTOs
 ******
 
-3. Addind the DTOs
-******
+3. Adding the DTOs
+- A DTO is an object that carries data between processes.
+- Represents the contract between the microservice client.
+
+• Using Record Types for DTOs as opposed to classes [pros]:
+    -> Simpler to declare
+    -> Value-based equality [when comparing two or more items, they will be considered equal if all their properties have the same value]
+    -> Immutable by default [modifications after creation are not allowed]
+    -> Built-in ToString() override [that shows the names and values of all properties]
 
 4. Adding the REST API operations
-******
+• ActionResult
+    -> Allows us to return status codes (e.g 200:OK, 204:BadRequest)
+    -> Allows us to return a more specific type like DtoType (e.g: CreateItemDto, UpdateItemDto) if we need to.
+    -> (Can return different types depending on what we have available)
+
+• IActionResult
+    -> When you don't want to return a specific type (No-Content)
+
 
 5. Handling invalid inputs  
 ******
