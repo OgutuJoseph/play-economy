@@ -1,0 +1,40 @@
+Module 2 - Your first microservice
+• Module objectives
+    - Create a .NET microservice from scratch
+    - Define the microservices REST API
+    - Define the Data Transfer Objects (DTOs) -> to establish contract between service and service clients.
+
+1. Creating a microservice via the .NET CLI
+    • Creating a dotnet app
+        -> dotnet new webapi -n [Name : Play.Catalog.Service]
+    • To specify .NET version during launch
+        -> dotnet new webapi -n [Name : Play.Catalog.Service] --framework net5.0
+    
+    • Project Dir Analysis
+    • .vscode -> contains files [test.json -> build and debug the app; launch.json -> how vscode launches the app]
+    • Program.cs -> entrypoint which defines how we are to start the host / application
+    • Startup.cs -> defines Service registration and request pipeline configuration
+    • /Properties/launchSettings.json -> defines a number of things e.g.:
+                                        -> applicationUrl -> defines what is the address of the microservice
+
+    • Building app
+        -> 1. [Inside Play.Catalog.Service] dotnet build
+        -> 2. Terminal > Run Build Task > build [involes editing tasks.json and VSCode environemnt]
+
+    • Running app
+        -> [Inside Play.Catalog.Service] dotnet run
+    
+    • Install certs [to enable project to run on chrome, remove warning etc]
+        -> dotnet dev-certs https --trust
+
+2. Introduction to the REST API and DTOs
+******
+
+3. Addind the DTOs
+******
+
+4. Adding the REST API operations
+******
+
+5. Handling invalid inputs  
+******
