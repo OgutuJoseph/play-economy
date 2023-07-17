@@ -1,0 +1,37 @@
+Module 3 - Adding database storage
+1. Introduction to the repository pattern and MongoDB
+******
+
+2. Implementing a MongoDB repository
+- A repository is an abstraction between the data layer and the business layer of an application.
+- It:
+    -> decouples the application logic from the data layer
+    -> minimizes duplicate data access logic
+
+• Why useing MongoDB
+- A NoSQL solution is preferred for our microservices because:
+    -> Won't need relationships across the data
+    -> Don't need ACID (Atomicity, Consistency, Isolation, Durability) guarantees
+    -> Won't write complex queries
+    -> Need low latency, high availability and high scalability
+
+• Adding MongoDB Nuget Package
+    -> 1. [Inside Play.Catalog.Service] dotnet add package MongoDB.Driver
+
+• /Play.Catalog/src/Play.Catalog.Service/Repositories/ItemsRepository >> IMongoCollection<Item> dbCollection
+    -> variable that is going to hold an instance of the 'items' collection
+
+3. Using the repository in the controller
+******
+
+4. Introduction to Docker
+******
+
+5. Trying out the REST API with a MongoDB container
+******
+
+6. Introduction to Dependency Injection and Configuration
+******
+
+7. Implementing dependency injection and configuration
+******
