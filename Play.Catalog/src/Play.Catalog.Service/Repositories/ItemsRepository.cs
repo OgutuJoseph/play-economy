@@ -6,16 +6,17 @@ using Play.Catalog.Service.Entities;
 
 namespace Play.Catalog.Service.Repositories
 {
-    public class ItemsRepository
+
+    public class ItemsRepository : IItemsRepository
     {
         private const string collectionName = "items";
         private readonly IMongoCollection<Item> dbCollection;
         private readonly FilterDefinitionBuilder<Item> filterBuilder = Builders<Item>.Filter;
 
-        public ItemsRepository()
+        public ItemsRepository(IMongoDatabase database)
         {
-            var mongoClient = new MongoClient("mongodb://localhost:27017");
-            var database = mongoClient.GetDatabase("play-economy-catalog");
+            // var mongoClient = new MongoClient("mongodb://localhost:27017");
+            // var database = mongoClient.GetDatabase("play-economy-catalog");
             dbCollection = database.GetCollection<Item>(collectionName);
         }
 
@@ -46,7 +47,7 @@ namespace Play.Catalog.Service.Repositories
         /** Method to update an item */
         public async Task UpdateAsync(Item entity)
         {
-             if (entity == null)
+            if (entity == null)
             {
                 throw new ArgumentNullException(nameof(entity));
             }
