@@ -52,6 +52,7 @@ Module 3 - Adding database storage
         -> BsonSerializer.RegisterSerializer(new DateTimeOffsetSerializer(BsonType.String));
 
 6. Introduction to Dependency Injection and Configuration
+******
 
 
 7. Implementing dependency injection and configuration
