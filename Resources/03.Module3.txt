@@ -21,17 +21,38 @@ Module 3 - Adding database storage
 • /Play.Catalog/src/Play.Catalog.Service/Repositories/ItemsRepository >> IMongoCollection<Item> dbCollection
     -> variable that is going to hold an instance of the 'items' collection
 
+
 3. Using the repository in the controller
 ******
 
 4. Introduction to Docker
-******
+• Docker - a platform that provides the ability to package and run an application in a loosely isolated environment called a container.
+
 
 5. Trying out the REST API with a MongoDB container
-******
+- To pull the image we will run 'docker run instruction' [docker-run-mongo] in our box
+- Once the image is run, it becomes a container [MongoDB Docker Container]
+    -> a fully working MongoDB server ready to respond to the requests of Catalog Microservice
+- Catalog microservice will a create a database using the MongoDB container and start interacting it.
+- As much as the container runs the Catalog database, the database itself does not live inside the container, but outside, to ensure it's not deleted once the container is destroyed.
+
+• Ruuning the container []
+    -> [Inside Play.Catalog**] docker run -d --rm --name mongo -p 27017:27017 -v mongodbdata:/data/db mongo
+    [-d]    - detached from the docker process
+    [--rm]  - to remove the container once it's stopped
+    [-p]    - port
+    [-v]    - volume: specifies how (where) we are going to store the database files that mongodb is going to be using.
+                ^ /data/db      -> default location where mongodb stores files
+                ^ mongodbdata   -> where the above files will be stored in the local machine (preventing data loss on container deletion)
+    [mongo 2nd] - name of docker image
+
+• To fix represenation of UUID and Date fields into redable formats
+    - In Startup.cs >> public void ConfigureServices
+        -> BsonSerializer.RegisterSerializer(new GuidSerializer(BsonType.String));
+        -> BsonSerializer.RegisterSerializer(new DateTimeOffsetSerializer(BsonType.String));
 
 6. Introduction to Dependency Injection and Configuration
-******
+
 
 7. Implementing dependency injection and configuration
 ******
