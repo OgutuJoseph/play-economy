@@ -1,0 +1,31 @@
+2.32.37 Using Postman
+******
+
+
+2.48.01 Reusing common code via NuGet
+• [DRY] Don't Repeat Yourself
+
+- Microservices should be independent of each other
+- Each Microservice should live in its own source control repository
+- NuGet is the package manager for .NET
+- A NuGet package is a single ZIP file (.nupkg) that contains files to share with others
+- Microservice projects don't need to know where NuGet packages are hosted
+
+
+2.52.12 Refactoring into a generic MongoDB repository
+******
+
+
+3.03.02 Refactoring MongoDB registration into extension methods
+******
+
+
+3.10.07 Moving generic code into a reusable NuGet package
+******
+
+
+3.26.04 Introduction to Docker Compose
+******
+
+
+3.28.24 Moving MongoDB to docker compose
