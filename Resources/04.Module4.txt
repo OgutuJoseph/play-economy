@@ -17,7 +17,8 @@
 
 
 3.03.02 Refactoring MongoDB registration into extension methods
-******
+• Creating a class library
+        -> dotnet new classlib -n [Name : Play.Common] --framework net5.0
 
 
 3.10.07 Moving generic code into a reusable NuGet package
