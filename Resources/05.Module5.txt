@@ -1,0 +1,32 @@
+Module 5 - Synchronous inter-service communication
+Creating Inventory microservice
+******
+
+
+Introduction to synchronous communication
+******
+
+
+Implementing synchronous communication via IHttpClientFactory
+******
+
+
+Understanding timeouts and retries with exponential backoff
+******
+
+
+Implementing a timeout policy via Polly
+******
+
+
+Implementing retries with exponential backoff
+******
+
+
+Understanding the circuit breaker pattern
+******
+
+
+Implementing the circuit breaker pattern
+******
+
