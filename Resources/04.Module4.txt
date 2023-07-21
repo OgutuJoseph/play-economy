@@ -22,8 +22,32 @@
 
 
 3.10.07 Moving generic code into a reusable NuGet package
-******
+• Adding MongoDB Nuget Package
+    -> [Inside Play.Common] dotnet add package MongoDB.Driver
 
+• Adding Microsoft Extensions Configuration Nuget Package
+    -> [Inside Play.Common] dotnet add package Microsoft.Extensions.Configuration
+
+• Adding Microsoft Extensions Configuration Binder Nuget Package
+    -> [Inside Play.Common] dotnet add package Microsoft.Extensions.Configuration.Binder
+
+• Adding Microsoft Extensions Dependency Injection Nuget Package
+    -> [Inside Play.Common] dotnet add package Microsoft.Extensions.DependencyInjection
+
+• Adding Nuget Package
+    -> [Inside Play.Common/src/Play.Common] dotnet pack -o ../../../packages/ 
+    ^^** !!Forward slash works!!
+    ^^** while opening Play.Common as VSCode Folder
+
+• Specifying package source
+    -> [Inside Play.Catalog] dotnet nuget add source dotnet nuget add source C:\OgutuJoseph\Projects\C#\play-economy\packages -n PlayEconomy
+    ^^** while opening Play.Catalog as VSCode Folder
+    ^^** running using powershell
+
+• Adding the package
+    -> [Inside Play.Catalog/src/Play.Catalog] dotnet add package Play.Common
+    ^^** while opening Play.Catalog as VSCode Folder
+    ^^** running using powershell
 
 3.26.04 Introduction to Docker Compose
 ******
