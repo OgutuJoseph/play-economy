@@ -50,7 +50,12 @@
     ^^** running using powershell
 
 3.26.04 Introduction to Docker Compose
-******
+• Docker Compose - a tool for definig and runnin multi-container docker applications.
+
+    -> Infrastructure services startup documented in a single file
+    -> A single command to start everything
+    -> All containers join default network
+
 
 
 3.28.24 Moving MongoDB to docker compose
