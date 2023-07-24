@@ -18,7 +18,7 @@ Introduction to synchronous communication
             - uses http2
 
 • Asynchronous
-    -> The client sends a request to the service but the response, if any, is not send immediately.
+    -> The client sends a request to the service but the response, if any, is not send immediately
 
 
 Implementing synchronous communication via IHttpClientFactory
