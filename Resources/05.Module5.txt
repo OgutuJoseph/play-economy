@@ -4,7 +4,21 @@ Creating Inventory microservice
 
 
 Introduction to synchronous communication
-******
+••• Microservice communication styles
+• Synchronous
+    -> The client sends a request and waits for a response from the service
+    -> The client cannot proceed without a response
+    -> The client thread may use a blocking or non-blocking implementation (callback)
+    -> Two approaches
+        1. REST + HTTP Protocol
+            - the traditional approach
+            - business subjects are modelled as resources (xml/json), and http pairs are used to manipulate them
+        2.  gRPC 
+            - increasingly popular approach for internal inter-service communication
+            - uses http2
+
+• Asynchronous
+    -> The client sends a request to the service but the response, if any, is not send immediately
 
 
 Implementing synchronous communication via IHttpClientFactory
