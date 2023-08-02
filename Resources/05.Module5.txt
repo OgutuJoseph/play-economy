@@ -14,8 +14,9 @@ Introduction to synchronous communication
             - the traditional approach
             - business subjects are modelled as resources (xml/json), and http pairs are used to manipulate them
         2.  gRPC 
+            - a binary message-based protocol in which clients and service exchange messages in the protocol buffers format
             - increasingly popular approach for internal inter-service communication
-            - uses http2
+            -^ because it uses http2 and is more efficient than REST.
 
 • Asynchronous
     -> The client sends a request to the service but the response, if any, is not send immediately
