@@ -3,7 +3,7 @@ Creating Inventory microservice
 ******
 
 
-Introduction to synchronous communication
+1. Introduction to synchronous communication
 ••• Microservice communication styles
 • Synchronous
     -> The client sends a request and waits for a response from the service
@@ -26,22 +26,38 @@ Implementing synchronous communication via IHttpClientFactory
 ******
 
 
-Understanding timeouts and retries with exponential backoff
+2. Understanding timeouts and retries with exponential backoff
+- In a distributed system, partial failures are bound to happen e.g.
+    -> Network outages
+    -> Hardware failures
+    -> Dependency failures
+    -> Or even routine things like having Deployment in progress
+- You must design your service to be resilient to those partial failures
+
+    • Setting Timeouts
+        - A service client should be designed not toblock indefinitely and use timeouts.
+            -> This ensures a more responsive experience and ensures resources are never tied up indefinitely.
+
+    • Retries with exponential backoff
+        - Performs call retries a certain number of times with a longer wait between each retry. 
+            -> (e.g 1st retry after 2s, 2nd retry after 4s...) after multiple retries, it will let the call fail.
+            -> the failing dependency has an increasing amount of time to recover.
+            -> avoids overwhelming the dependency.
+
+
+
+3. Implementing a timeout policy via Polly
 ******
 
 
-Implementing a timeout policy via Polly
+4. Implementing retries with exponential backoff
 ******
 
 
-Implementing retries with exponential backoff
+5. Understanding the circuit breaker pattern
 ******
 
 
-Understanding the circuit breaker pattern
-******
-
-
-Implementing the circuit breaker pattern
+6. Implementing the circuit breaker pattern
 ******
 
