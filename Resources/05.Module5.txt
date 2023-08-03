@@ -56,7 +56,12 @@ Implementing synchronous communication via IHttpClientFactory
 
 
 5. Understanding the circuit breaker pattern
-******
+-> Dealing with resource exhaustion and dealing with it using the circuit breaker pattern
+
+    • circuit breaker pattern
+        - prevents the service from performing an operation that's likely to fail (also known as opening the ciruit)
+            -> prevent the service from reaching resource exhaustion
+            -> avoids overwhelming the dependency
 
 
 6. Implementing the circuit breaker pattern
