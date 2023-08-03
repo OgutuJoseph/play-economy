@@ -47,7 +47,8 @@ Implementing synchronous communication via IHttpClientFactory
 
 
 3. Implementing a timeout policy via Polly
-******
+• Adding Polly Nuget Package
+    -> 1. [Inside Play.Inventory.Service] dotnet add package Microsoft.Extensions.Http.Polly
 
 
 4. Implementing retries with exponential backoff
