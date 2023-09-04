@@ -1,5 +1,6 @@
 February 25 2022
 URL : https://www.youtube.com/watch?v=CqCDOosvZIk -- .NET Microservices – Full Course for Beginners
+05.57.23
 
 00.14 Module 1 - Welcome to the course
 04.52 Development environment setup
