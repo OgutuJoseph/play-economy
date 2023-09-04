@@ -1,0 +1,90 @@
+Module 6 - Asynchronous inter-service communication
+••• Module Objectives
+- The basis of asynchronous communication
+- Microservices autonomy and the SLA
+- Use a message broker for async data propagation
+- Standup RabbitMQ via docker compose
+- Publish messages to RabbitMQ via MassTransit
+- Consume messages from RabbitMQ using MassTransit
+- Implement eventual data consistency of data propagated across microservices
+
+1. Introduction to asynchronous communication
+••• The Problem with Synchornous Communication
+• SLA (Service Level Agreement) - a commitment between a service provider and a client.
+    - E.g. 99.9% availability as captured with the SLA would mean only a downtime of 44 minutes in a month.
+    - Working with synchronous communication, calculating such numbers for the SLA gets more complicated.
+        -> e.g. having the deepest dependency also reporting an availability of 99.9% in the SLA
+        -> When dep4 fails, it affects dep3's availability to 99.8%, dep1 to 99.7% impacts root SLA to 99.6 etc.
+        -> As a result from an expected downtime ot 44 minutes across the month, you get 175 minutes.
+    
+    ••• Issues as a result
+        -> Increased latency
+        -> Partial failure aplification
+        -> Reduced SLA
+
+••• Asyncronous Communication Style
+    -> The client does not wait for a response in a timely manner
+    -> There might be no response at all
+
+    << To enable such communication, there is usually an intemediary called 'lightweight message broker'
+        -> Usually lightweight meaning it has no business logic to it.
+    >>
+    
+    -> Message broker has high availability
+    -> Messages are sent to the messsage brorker and could be received by:
+        • A single receiver (asynchronous commands) - in which case the message is assumed to be a command via which the client requests an action on the receiving service. 
+            --> When a purchase operation starts, 
+            --> we send a command to inventory service asking it to run items to the user's inventory
+            --> and another command to an identity service asking it for the identity of the user
+        • Multiple receivers (publish/subscribe events) -  there are multiple services that subscribe published by the client service.
+            --> When our catalog service would like to publish any updates to its catalog of items so that all services can be informed on the changes.
+
+••• Microservices autonomy
+In a single receiver scenario,
+--> we would have client talking to service [s1]
+--> the service will not talk to its dependent service [dep1]
+--> the service [s1] will instead send an asynchronous message to a broker and acknowledge to the client a successful reception of the request
+--> the dependent service [dep1] will consume this message from the message broker as soon as possible and will provide a reply via the same platform
+--> client can request for the notification, or the service [s1] can notify the client
+
+    • Advantages
+        - Partial failures not propagated
+        - Independent service SLA
+        - Microservice autonomy enforced
+
+••• Asyncrhonous propagation of data
+• Advantages   
+    - Data is eventually consistent
+    - Preserves microservice autonomy
+    - Removes inter-service latency 
+
+••• Implementing asynchronous communication
+• Rabbit MQ     - Lightweight message broker that supports the AMQP protocol
+• Mass Transit  - Open source distributed app framework for .NET
+                    -> Introduces concept of publisher and consumer
+
+
+
+2. Defining the message contracts
+******
+
+
+3. Publishing messages via MassTransit
+******
+
+
+4. Standing up a RabbitMQ docker container
+******
+
+
+5. Refactoring MassTransit configuration into the reusable NuGet package
+******
+
+
+6. Consuming messages for eventual data consistency
+******
+
+
+7. Removing the inter-service synchronous communication
+******
+
