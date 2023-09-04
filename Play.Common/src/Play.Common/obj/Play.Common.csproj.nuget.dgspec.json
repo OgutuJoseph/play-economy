@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\OgutuJoseph\\Projects\\C#\\play-economy\\Play.Common\\src\\Play.Common\\Play.Common.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "restore": {
         "projectUniqueName": "C:\\OgutuJoseph\\Projects\\C#\\play-economy\\Play.Common\\src\\Play.Common\\Play.Common.csproj",
         "projectName": "Play.Common",
@@ -21,6 +21,7 @@
           "net5.0"
         ],
         "sources": {
+          "C:\\OgutuJoseph\\Projects\\C#\\play-economy\\packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -40,6 +41,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "MassTransit.AspNetCore": {
+              "target": "Package",
+              "version": "[7.3.1, )"
+            },
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0, )"

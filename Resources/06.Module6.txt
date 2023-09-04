@@ -80,10 +80,10 @@ In a single receiver scenario,
 
 3. Publishing messages via MassTransit
 • Adding MassTransit ASPNetCore Nuget Package
-    -> [Inside Play.Inventory.Service] dotnet add package MassTransit.AspNetCore
+    -> [Inside Play.Inventory >> src Play.Inventory.Service] dotnet add package MassTransit.AspNetCore
 
 • Adding MassTransit RabbitMQ Nuget Package
-    -> [Inside Play.Inventory.Service] dotnet add package MassTransit.RabbitMQ
+    -> [Inside Play.Inventory >> src Play.Inventory.Service] dotnet add package MassTransit.RabbitMQ
 
 
 
@@ -98,7 +98,23 @@ In a single receiver scenario,
 
 
 5. Refactoring MassTransit configuration into the reusable NuGet package
-******
+• Adding MassTransit ASPNetCore Nuget Package
+    -> [Inside Play.Common >> src Play.Common] dotnet add package MassTransit.AspNetCore
+
+• Adding MassTransit RabbitMQ Nuget Package
+    -> [Inside Play.Common >> src Play.Common] dotnet add package MassTransit.RabbitMQ
+
+• Adding Nuget Package
+    -> [Inside Play.Common >> src >> Play.Common] dotnet pack -p:PackageVersion=1.0.1 -o ../../../packages/ 
+    ^^** !!Forward slash works!!
+    ^^** while opening Play.Common as VSCode Folder
+
+• Specifying package source
+    -> [Inside Play.Catalog >> src >> Play.Catalog.Service >> Play.Catalog.Service.csproj]
+        - update    :: <PackageReference Include="Play.Common" Version="1.0.0" />
+        - to        :: <PackageReference Include="Play.Common" Version="1.0.1" />
+        ^^ Since we had already included the package source in 04.Module.4
+
 
 
 6. Consuming messages for eventual data consistency
