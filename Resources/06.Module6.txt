@@ -86,6 +86,7 @@ In a single receiver scenario,
     -> [Inside Play.Inventory.Service] dotnet add package MassTransit.RabbitMQ
 
 
+
 4. Standing up a RabbitMQ docker container
 • Launching docker
     -> [Inside Play.Infra] docker-compose up -d
@@ -93,8 +94,6 @@ In a single receiver scenario,
 • To view Rabbit MQ Client
     - On browser, 
         -> http://localhost:15672/   [15672: value defined in docker-compose services.rabbitmq.volumes]
-
-
 
 
 
