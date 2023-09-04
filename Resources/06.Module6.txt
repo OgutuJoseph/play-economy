@@ -66,7 +66,15 @@ In a single receiver scenario,
 
 
 2. Defining the message contracts
-******
+• Creating a classlib
+    [Inside Play.Catalog >> src]
+    -> dotnet new classlib -n [Name : Play.Catalog.Contracts]
+• To specify .NET version
+    -> dotnet new classlib -n [Name : Play.Catalog.Contracts] --framework net5.0
+
+• Adding reference
+    [Inside Play.Catalog >> src >> Play.Catalog.Service]
+    -> dotnet add reference '..\Play.Catalog.Contracts\Play.Catalog.Contracts.csproj'
 
 
 3. Publishing messages via MassTransit
