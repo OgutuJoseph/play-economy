@@ -87,7 +87,15 @@ In a single receiver scenario,
 
 
 4. Standing up a RabbitMQ docker container
-******
+• Launching docker
+    -> [Inside Play.Infra] docker-compose up -d
+
+• To view Rabbit MQ Client
+    - On browser, 
+        -> http://localhost:15672/   [15672: value defined in docker-compose services.rabbitmq.volumes]
+
+
+
 
 
 5. Refactoring MassTransit configuration into the reusable NuGet package
