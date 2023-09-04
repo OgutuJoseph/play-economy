@@ -77,8 +77,13 @@ In a single receiver scenario,
     -> dotnet add reference '..\Play.Catalog.Contracts\Play.Catalog.Contracts.csproj'
 
 
+
 3. Publishing messages via MassTransit
-******
+• Adding MassTransit ASPNetCore Nuget Package
+    -> [Inside Play.Inventory.Service] dotnet add package MassTransit.AspNetCore
+
+• Adding MassTransit RabbitMQ Nuget Package
+    -> [Inside Play.Inventory.Service] dotnet add package MassTransit.RabbitMQ
 
 
 4. Standing up a RabbitMQ docker container
