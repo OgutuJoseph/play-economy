@@ -50,6 +50,8 @@ URL : https://www.youtube.com/watch?v=CqCDOosvZIk -- .NET Microservices – Full
 5.22.21 Standing up a RabbitMQ docker container
 5.30.04 Refactoring MassTransit configuration into the reusable NuGet package
 5.40.11 Consuming messages for eventual data consistency
+    - Adding Contracts as package in inventory
+    - Consuming message that represents an item that has been created
 6.01.54 Removing the inter-service synchronous communication
 
 6.16.32 Module 7 - Initial FrontEnd Integration
