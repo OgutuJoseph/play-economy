@@ -127,12 +127,23 @@ In a single receiver scenario,
     -> [Inside Play.Inventory >> src >> Play.Inventory.Service] dotnet add package Play.Catalog.Contracts
     ^^** while opening Play.Inventory as VSCode Folder
 
-    -> [Inside Play.Catalog >> src >> Play.Catalog.Service >> Play.Catalog.Service.csproj]
+    -> [Inside Play.Inventory >> src >> Play.Inventory.Service >> Play.Invetory.Service.csproj]
         - update    :: <PackageReference Include="Play.Common" Version="1.0.0" />
         - to        :: <PackageReference Include="Play.Common" Version="1.0.1" />
 
 
 
 7. Removing the inter-service synchronous communication
-******
+• Publishing Play.Common as Nuget Package
+    -> [Inside Play.Common >> src >> Play.Common] dotnet pack -p:PackageVersion=1.0.2 -o ../../../packages/ 
+    ^^** !!Forward slash works!!
+    ^^** while opening Play.Common as VSCode Folder
 
+• Specifying package source
+    -> [Inside Play.Catalog >> src >> Play.Catalog.Service >> Play.Catalog.Service.csproj]
+        - update    :: <PackageReference Include="Play.Common" Version="1.0.1" />
+        - to        :: <PackageReference Include="Play.Common" Version="1.0.2" />
+
+    -> [Inside Play.Inventory >> src >> Play.Inventory.Service >> Play.Inventory.Service.csproj]
+        - update    :: <PackageReference Include="Play.Common" Version="1.0.1" />
+        - to        :: <PackageReference Include="Play.Common" Version="1.0.2" />
