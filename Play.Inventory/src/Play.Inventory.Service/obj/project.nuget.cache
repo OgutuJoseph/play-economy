@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AEyqgs5KXxVgdvQWi1B675fP1JE2EeO7w6GSAs3ULMefIFogGe+vqnGsYy3fQY4uIpoPVwwFDvfa5I3S6LocVA==",
+  "dgSpecHash": "u8RVuC7YA2zxFY9qOIs2cPZ3KtYV8YmmyTrQVV2FkoZ4Sd1aFUhu/h+37YA8HvC4XyYvc4m/sV9NcY53qHc9CQ==",
   "success": true,
   "projectFilePath": "C:\\OgutuJoseph\\Projects\\C#\\play-economy\\Play.Inventory\\src\\Play.Inventory.Service\\Play.Inventory.Service.csproj",
   "expectedPackageFiles": [
@@ -36,7 +36,7 @@
     "C:\\Users\\AB030WP\\.nuget\\packages\\mongodb.driver.core\\2.20.0\\mongodb.driver.core.2.20.0.nupkg.sha512",
     "C:\\Users\\AB030WP\\.nuget\\packages\\mongodb.libmongocrypt\\1.8.0\\mongodb.libmongocrypt.1.8.0.nupkg.sha512",
     "C:\\Users\\AB030WP\\.nuget\\packages\\play.catalog.contracts\\1.0.0\\play.catalog.contracts.1.0.0.nupkg.sha512",
-    "C:\\Users\\AB030WP\\.nuget\\packages\\play.common\\1.0.1\\play.common.1.0.1.nupkg.sha512",
+    "C:\\Users\\AB030WP\\.nuget\\packages\\play.common\\1.0.2\\play.common.1.0.2.nupkg.sha512",
     "C:\\Users\\AB030WP\\.nuget\\packages\\polly\\7.2.3\\polly.7.2.3.nupkg.sha512",
     "C:\\Users\\AB030WP\\.nuget\\packages\\polly.extensions.http\\3.0.0\\polly.extensions.http.3.0.0.nupkg.sha512",
     "C:\\Users\\AB030WP\\.nuget\\packages\\rabbitmq.client\\6.5.0\\rabbitmq.client.6.5.0.nupkg.sha512",
