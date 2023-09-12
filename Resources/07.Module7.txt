@@ -1,0 +1,33 @@
+Module 7 - Initial FrontEnd Integration
+••• Module Objectives
+- Get and build the frontend project
+- Host the frontend in Node.js
+- Explore the React based frontend structure
+- Understand and configure CORS
+- Debug the frontend to microservices communication
+
+
+1. Installing Node.js
+•••
+
+
+2. Getting started with the frontend
+•••
+
+
+3. Understanding CORS
+•••
+
+
+4. Addind the CORS middleware
+•••
+
+
+5. Expoloring the frontend to microservices communication
+•••
+
+
+Next Steps
+•••
+
+
